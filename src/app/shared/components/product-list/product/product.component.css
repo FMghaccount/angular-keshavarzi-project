@@ -1,3 +1,26 @@
 .card-body .list-unstyled {
   padding: 0;
+  margin-bottom: 10px;
+  background-color: #efeff4;
+  border-radius: 10px;
+}
+
+.card-body {
+  margin-bottom: 10px;
+  background-color: #efeff4;
+  padding: 10px !important;
+  border-radius: 10px;
+}
+
+.card-body .list-unstyled li {
+  background: #fff;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.card-body p {
+  background: #fff;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
 }

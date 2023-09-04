@@ -20,6 +20,7 @@ body {
   font-family: "iranyekan" !important;
   font-size: 1rem;
   overflow-x: hidden;
+  background-color: #efeff4;
 }
 
 app-root {
@@ -31,6 +32,9 @@ app-root {
 
 app-footer {
   border: 1px solid #dee2e6;
+  background: #fff;
+  padding: 10px;
+  border-radius: 10px;
 }
 
 footer {

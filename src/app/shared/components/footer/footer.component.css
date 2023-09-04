@@ -18,7 +18,7 @@ footer {
   width: 73%;
 } */
 
-.lh-footer-description{
+.lh-footer-description {
   line-height: 1.9rem !important;
 }
 
@@ -26,10 +26,28 @@ footer {
   text-align: justify;
 }
 
-.fs-7{
+.fs-7 {
   font-size: 0.87rem !important;
 }
 
 .footer-ul {
   padding: 0;
+}
+
+.row .footer-list h5 {
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.footer-list .list-unstyled li {
+  background: #efeff4;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.footer-brand-descriptipn {
+  margin-bottom: 10px;
+  background-color: #efeff4;
+  padding: 10px !important;
+  border-radius: 10px;
 }

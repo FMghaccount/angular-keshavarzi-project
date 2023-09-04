@@ -9,6 +9,11 @@
   object-fit: contain;
 }
 
+.carousel-row {
+  width: 100%;
+  margin: auto;
+}
+
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   background-color: #000 !important;

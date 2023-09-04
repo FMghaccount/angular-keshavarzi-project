@@ -1,1 +1,65 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: "iranyekan";
+
+  src: url("./assets/fonts/iranyekan/weight-400/iranyekanwebregularfanum.eot");
+
+  src: url("./assets/fonts/iranyekan/weight-400/iranyekanwebregularfanum.eot?#iefix")
+      format("embedded-opentype"),
+    url("./assets/fonts/iranyekan/weight-400/iranyekanwebregularfanum.ttf")
+      format("woff"),
+    url("./assets/fonts/iranyekan/weight-400/iranyekanwebregularfanum.woff")
+      format("truetype");
+
+  font-weight: normal;
+
+  font-style: normal;
+}
+
+body {
+  font-family: "iranyekan" !important;
+  font-size: 1rem;
+  overflow-x: hidden;
+}
+
+app-root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+app-footer {
+  border: 1px solid #dee2e6;
+}
+
+footer {
+  margin-top: auto;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #000 !important;
+  border-radius: 25% !important;
+  padding: 20px !important;
+}

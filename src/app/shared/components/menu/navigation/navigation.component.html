@@ -1,0 +1,72 @@
+<div class="container-fluid container-xxl">
+  <div class="row">
+    <nav
+      class="navbar px-2 px-lg-1 navbar-expand-sm p-sm-0 bg-white border-bottom"
+    >
+      <div class="container-fluid align-items-baseline">
+        <app-cart class="order-sm-3"></app-cart>
+        <button
+          class="navbar-toggler order-sm-2"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#main_nav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse order-sm-1" id="main_nav">
+          <ul class="navbar-nav align-items-center pe-0">
+            <li class="nav-item active">
+              <a class="nav-link" [routerLink]="['/']"
+                ><img
+                  class="logo"
+                  src="../../../../assets/logos/logo3.PNG"
+                  alt="Sabad Logo"
+                  width="90"
+                  height="40"
+              /></a>
+            </li>
+            <li class="nav-item dropdown has-megamenu">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                data-bs-toggle="dropdown"
+              >
+                محصولات
+              </a>
+              <div class="dropdown-menu megamenu" role="menu">
+                <div class="row g-3">
+                  <div
+                    class="col-lg-3 col-12 col-sm-6 gx-5 gy-2"
+                    *ngFor="let category of categories; let i =index"
+                  >
+                    <div class="col-megamenu p-1 border rounded-3">
+                      <a [routerLink]="['category', i]"><h6 class="title">{{ category.persianTitle }}</h6></a>
+                      <hr class="custom-divider">
+                      <ul class="list-unstyled">
+                        <li
+                          *ngFor="let item of category.brandsTitles.split('-'); let n = index"
+                        >
+                          <a [routerLink]="['category', i, 'brand', n]" >{{ item }}</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [routerLink]="['/about']"> درباره ما </a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" [routerLink]="['/contact-us']">
+                تماس با ما
+              </a>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+</div>

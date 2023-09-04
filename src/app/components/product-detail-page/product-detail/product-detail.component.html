@@ -1,0 +1,131 @@
+<div
+  class="container-fluid border mt-5 border-1 rounded-2 container-lg"
+  *ngIf="product"
+>
+  <div class="row">
+    <div class="card border-0 mb-3">
+      <div class="row gx-3">
+        <!-- <div class="col-12 col-md-5">
+          <img class="product-image py-2" height="200px" src="{{product.images.split('---')[0]}}" alt="{{product.pageTitle.split('|')[0]}}">
+        </div> -->
+        <div
+          class="container-fluid col-12 offset-2 col-md-6 container-xxl mb-3 px-0"
+        >
+          <div class="row">
+            <ngb-carousel class="px-0">
+              <ng-template
+                *ngFor="let image of product.images.split('---')"
+                ngbSlide
+              >
+                <a>
+                  <div class="picsum-img-wrapper">
+                    <img src="{{ image }}" class="d-block w-100" />
+                  </div>
+                </a>
+              </ng-template>
+            </ngb-carousel>
+          </div>
+        </div>
+
+        <div
+          class="col-md-3 col-12 offset-1 d-flex flex-column justify-content-between align-items-center"
+        >
+          <div class="card-body">
+            <ul class="list-unstyled p-0">
+              <li
+                class="mb-2"
+                *ngFor="let item of product.pageTitle.split('|')"
+              >
+                - {{ item }}
+              </li>
+            </ul>
+            <!-- <h5 class="card-title">{{product.pageTitle}}</h5> -->
+            <p class="card-text">{{ product.price }} تومان</p>
+          </div>
+          <button
+            (click)="addToBasket(product)"
+            class="btn btn-danger w-50 mb-2"
+          >
+            خرید
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  *ngIf="product"
+  class="container-fluid container-lg border border-1 rounded-2 p-3 mb-4 mt-5"
+>
+  <div
+    class="row justify-content-center align-content-center align-items-center flex-column"
+  >
+    <h4 class="text-center pb-2">معرفی برند</h4>
+    <p style="text-align: justify">
+      {{ product.brandDescription }}
+    </p>
+  </div>
+</div>
+
+<div
+  *ngIf="product"
+  class="container-fluid container-lg border border-1 rounded-2 p-3 mb-4 mt-5"
+>
+  <div
+    class="row justify-content-center align-content-center align-items-center flex-column"
+  >
+    <h4 class="text-center pb-2">معرفی محصول</h4>
+    <p style="text-align: justify">
+      {{ product.productDescription }}
+    </p>
+  </div>
+</div>
+
+<div *ngIf="product" class="container-fluid container-lg p-3 mb-4 mt-5">
+  <div
+    class="row justify-content-center align-content-center align-items-center flex-column"
+  >
+    <h4 class="text-center pb-2">جدول مشخصات</h4>
+    <table
+      class="table table-bordered table-responsive-md table-hover mt-3 table-striped"
+    >
+      <!-- <thead>
+        <tr>
+          <th scope="col">ویژگی</th>
+          <th scope="col">مقدار</th>
+
+        </tr>
+      </thead> -->
+      <tbody>
+        <tr *ngFor="let spec of product.specs.split('-')">
+          <td>{{ spec.split(":")[0] }}</td>
+          <td>{{ spec.split(":")[1] }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div *ngIf="product" class="container-fluid container-lg p-3 mb-4 mt-5">
+  <div
+    class="row justify-content-center align-content-center align-items-center flex-column"
+  >
+    <h4 class="text-center pb-2">محصولات مرتبط</h4>
+    <app-product-list [products]="relatedProducts"></app-product-list>
+  </div>
+</div>
+
+<div
+  *ngIf="!product"
+  class="container border py-3 rounded-2 border-danger border-3 mb-4 mt-5"
+>
+  <div
+    class="row justify-content-center align-content-center align-items-center flex-column"
+  >
+    <h4 class="text-center text-danger">محصول مورد نظر یافت نشد</h4>
+    <p class="text-center py-4">
+      <a routerLink="/" class="btn btn-outline-primary">بازگشت به صفحه اصلی</a>
+    </p>
+  </div>
+</div>

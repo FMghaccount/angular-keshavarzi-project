@@ -1,0 +1,22 @@
+<div *ngIf="products?.length <= 0 && isLoading === true" class="container-fluid  container-lg mb-5 mt-5">
+  <div class="row justify-content-center align-items-center">
+    <app-loading></app-loading>
+  </div>
+</div>
+
+<div *ngIf="products?.length <= 0 && isLoading !== true" class="container-fluid  container-lg border p-3 rounded-2 border-danger border-3 mb-4 mt-5">
+  <div class="row justify-content-center align-content-center align-items-center flex-column">
+    <h4 class="text-center text-danger">محصولی یافت نشد</h4>
+    <p class="text-center py-4"><a [routerLink]="['/']"  class="btn btn-outline-primary">بازگشت به صفحه اصلی</a></p>
+  </div>
+</div>
+
+<div *ngIf="products?.length > 0" class="container-fluid container-xxl mb-5">
+  <div class="row justify-content-center">
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+      <div class="col" *ngFor="let product of products; let i = index">
+        <app-product [product]="product" [productId]="i"></app-product>
+      </div>
+    </div>
+  </div>
+</div>

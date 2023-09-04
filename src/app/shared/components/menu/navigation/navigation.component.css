@@ -1,0 +1,60 @@
+@media (max-width: 991px) {
+  .navbar.fixed-top .navbar-collapse,
+  .navbar.sticky-top .navbar-collapse {
+    overflow-y: auto;
+    max-height: 90vh;
+    margin-top: 10px;
+  }
+}
+
+@media all and (min-width: 576px) {
+  .navbar .has-megamenu {
+    position: static !important;
+  }
+  .navbar .megamenu {
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+.megamenu {
+  padding-top: 1.25rem;
+  overflow-x: hidden;
+}
+
+.col-megamenu h6,
+.list-unstyled li {
+  text-align: center;
+}
+
+.dropdown-toggle::after {
+  margin-right: 0 !important;
+  vertical-align: baseline !important;
+}
+
+.logo {
+  border-radius: 25px;
+}
+
+.custom-divider {
+  width: 29%;
+  margin: 0.4rem auto;
+  color: #dc3545;
+}
+
+.col-megamenu a,
+.col-megamenu ul li a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.col-megamenu .list-unstyled li:not(:last-child) {
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.col-megamenu .list-unstyled {
+  padding: 0;
+}

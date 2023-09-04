@@ -1,0 +1,18 @@
+<div class="card mb-3">
+  <div class="row flex-column flex-sm-row g-0 py-3">
+    <div class="col-12 col-sm-5">
+      <a class="text-center" [routerLink]="['/product', productId]">
+        <img class="product-image py-2" height="200px" src="{{product.images.split('---')[0]}}" alt="{{product.pageTitle.split('|')[0]}}">
+      </a>
+    </div>
+    <div class="col-sm-7 col-12 d-flex flex-column justify-content-between align-items-center">
+      <div class="card-body p-0">
+        <ul class="list-unstyled">
+          <li class="mb-2" *ngFor="let item of product.pageTitle.split('|')"> - {{item}}</li>
+        </ul>
+        <p class="card-text">{{product.price}} تومان</p>
+      </div>
+      <button (click)="addToBasket(product)" class="btn btn-danger w-50 mb-2" >خرید</button>
+    </div>
+  </div>
+</div>

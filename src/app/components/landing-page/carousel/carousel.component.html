@@ -1,0 +1,28 @@
+<div class="container-fluid container-xxl mb-3 px-0">
+  <div class="row">
+    <ngb-carousel class="px-0">
+      <ng-template ngbSlide>
+        <a [routerLink]="['/category', 0, 'brand', 0]">
+          <div class="picsum-img-wrapper">
+            <img
+              src="../../../../assets/apple.webp"
+              height="300px"
+              alt="apple"
+            />
+          </div>
+        </a>
+      </ng-template>
+      <ng-template ngbSlide>
+        <a [routerLink]="['/category', 0, 'brand', 1]">
+          <div class="picsum-img-wrapper">
+            <img
+              src="../../../../assets/samsung.jpg"
+              height="300px"
+              alt="samsung"
+            />
+          </div>
+        </a>
+      </ng-template>
+    </ngb-carousel>
+  </div>
+</div>

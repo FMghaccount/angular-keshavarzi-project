@@ -1,0 +1,40 @@
+<div class="container border border-1 rounded-2 p-3 mb-4 mt-5">
+  <div
+    class="row justify-content-center align-content-center align-items-center flex-column"
+  >
+    <h4 class="text-center pb-2">فروشگاه سبد</h4>
+    <p style="text-align: justify">
+      لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از
+      طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان
+      که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با
+      هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته
+      حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها
+      شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ
+      پیشرو در زبان فارسی ایجاد کرد
+    </p>
+  </div>
+</div>
+<div class="container-fluid" *ngIf="products?.length !== 0">
+  <div class="container border-bottom mb-2 mt-5">
+    <div class="row text-center">
+      <h4>آخرین محصولات</h4>
+    </div>
+  </div>
+  <div class="row">
+    <app-product-list
+      *ngIf="products?.length !== 0"
+      [products]="products"
+    ></app-product-list>
+  </div>
+</div>
+
+<div *ngIf="products?.length === 0" class="container border py-3 rounded-2 border-danger border-3 mb-4 mt-5">
+  <div
+    class="row justify-content-center align-content-center align-items-center flex-column"
+  >
+    <h4 class="text-center text-danger">محصولی یافت نشد</h4>
+    <p class="text-center py-4">
+      <a routerLink="/" class="btn btn-outline-primary">بازگشت به صفحه اصلی</a>
+    </p>
+  </div>
+</div>

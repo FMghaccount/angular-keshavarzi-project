@@ -1,0 +1,35 @@
+footer {
+  margin-top: auto;
+}
+
+.logo {
+  border-radius: 25px;
+}
+
+.footer-logo {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: start;
+  /* width: 25%; */
+}
+
+/* .footer-description {
+  width: 73%;
+} */
+
+.lh-footer-description{
+  line-height: 1.9rem !important;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.fs-7{
+  font-size: 0.87rem !important;
+}
+
+.footer-ul {
+  padding: 0;
+}

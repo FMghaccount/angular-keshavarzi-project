@@ -1,0 +1,56 @@
+<!-- <div class="custom-wrapper">
+  <i id="left" class="fa-solid fa-angle-left"></i>
+  <ul class="custom-carousel">
+    <li class="custom-card" *ngFor="let product of relatedProducts" >
+      <div class="img"><img src="{{product.images.split('---')[0]}}" alt="{{product.images.split('---')[0]}}" draggable="false"></div>
+      <h6>{{ product.pageTitle.split('|').join(' ') }}</h6>
+      <span>{{ product.price }} تومان</span>
+    </li>
+  </ul>
+  <i id="right" class="fa-solid fa-angle-right"></i>
+</div> -->
+
+
+<!-- <owl-carousel-o [options]="customOptions">
+
+  <ng-container *ngFor="let product of relatedProducts; let i = index">
+    <ng-template carouselSlide [id]="i">
+      <img [src]="product.images.split('---')[0]" alt="test" >
+    </ng-template>
+  </ng-container>
+
+</owl-carousel-o> -->
+
+
+<owl-carousel-o [options]="customOptions">
+  <ng-template carouselSlide>
+    <div class="slide">
+      <img src="https://via.placeholder.com/600/92c952" alt="img 1" />
+    </div>
+  </ng-template>
+  <ng-template carouselSlide>
+    <div class="slide">
+      <img src="https://via.placeholder.com/600/771796" alt="img 2" />
+    </div>
+  </ng-template>
+  <ng-template carouselSlide>
+    <div class="slide">
+      <img src="https://via.placeholder.com/600/24f355" alt="img 3" />
+    </div>
+  </ng-template>
+  <ng-template carouselSlide>
+    <div class="slide">
+      <img src="https://via.placeholder.com/600/d32776" alt="img 4" />
+    </div>
+  </ng-template>
+  <ng-template carouselSlide>
+    <div class="slide">
+      <img src="https://via.placeholder.com/600/f66b97" alt="img 5" />
+    </div>
+  </ng-template>
+  <ng-template carouselSlide>
+    <div class="slide">
+      <img src="https://via.placeholder.com/600/56a8c2" alt="img 6" />
+    </div>
+  </ng-template>
+</owl-carousel-o>

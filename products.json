@@ -1,0 +1,233 @@
+{
+  "products": {
+    "0": {
+      "categoryId": 0,
+      "brandId": 0,
+      "brandCategoryId": 0,
+      "brandDescription": "تقریباً هر ابزار هوشمندی که بخواهید در میان تولیدات برند اپل موجود است. در ادامه درباره‌ی دسته‌بندی‌های محصولات این برند صحبت خواهیم کرد.",
+      "pageTitle": "گوشی آیفون 13|128|سفید",
+      "persianTitle": "آیفون",
+      "model": "13",
+      "price": "1000",
+      "discount": "200",
+      "discountAvailability": true,
+      "inventoryStatus": "INSTOCK",
+      "quantity": 24,
+      "isAvailable": true,
+      "productDescription": "آیفون 13 - 128 گیگ - سفید",
+      "specsCategory": "mobile",
+      "specs": "ram:2G-rom:128-weight:400g-isActive:true-color:white",
+      "rating": 4.5,
+      "images": "https://dkstatics-public.digikala.com/digikala-products/b9bc0a701d34c7a5bb84f708dbcb384b5ebee01f_1677411590.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90---https://dkstatics-public.digikala.com/digikala-products/9831370a26f9a17f8aaa2ec139c9342225cdd436_1689611230.jpg?x-oss-process=image/resize,m_lfit,h_800,w_600/quality,q_90---https://dkstatics-public.digikala.com/digikala-products/ec9a962187e1f82cc47e7a148ef99ec1c6fd024d_1656423336.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+    },
+    "1": {
+      "categoryId": 0,
+      "brandId": 0,
+      "brandCategoryId": 0,
+      "brandDescription": "تقریباً هر ابزار هوشمندی که بخواهید در میان تولیدات برند اپل موجود است. در ادامه درباره‌ی دسته‌بندی‌های محصولات این برند صحبت خواهیم کرد.",
+      "pageTitle": "گوشی آیفون 13 پرو|128|آبی",
+      "model": "13 pro",
+      "price": "1200",
+      "discount": "400",
+      "discountAvailability": true,
+      "inventoryStatus": "INSTOCK",
+      "quantity": 14,
+      "isAvailable": true,
+      "productDescription": "آیفون 13 پرو - 128 گیگ - آبی",
+      "specsCategoryId": "0",
+      "specs": "ram:2G-rom:128-weight:900g-isActive:true-color:blue",
+      "rating": 4,
+      "images": "https://dkstatics-public.digikala.com/digikala-products/40026b18c2b053ac4a68c3288556dc899a77aecd_1677070081.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90---https://dkstatics-public.digikala.com/digikala-products/56e62d83d42e559e72ab30fe7a324120e28a1798_1689485002.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+    },
+    "2": {
+      "categoryId": 0,
+      "brandId": 0,
+      "brandCategoryId": 0,
+      "brandDescription": "تقریباً هر ابزار هوشمندی که بخواهید در میان تولیدات برند اپل موجود است. در ادامه درباره‌ی دسته‌بندی‌های محصولات این برند صحبت خواهیم کرد.",
+      "pageTitle": "گوشی آیفون 13 پرو|256|طلایی",
+      "model": "13 pro",
+      "price": "1200",
+      "discount": "400",
+      "discountAvailability": true,
+      "inventoryStatus": "INSTOCK",
+      "quantity": 14,
+      "isAvailable": true,
+      "productDescription": "آیفون 13 پرو - 256 گیگ - طلایی",
+      "specsCategory": "0-mobile",
+      "specs": "ram:3G-rom:256-weight:900g-isActive:true-color:gold",
+      "rating": 4.2,
+      "images": "https://dkstatics-public.digikala.com/digikala-products/dcd6e4e843bea3f070614a95d27b1181fdf23008_1677071626.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90---https://dkstatics-public.digikala.com/digikala-products/28a2a6b021614d390f2439b56c478e3d66e278c9_1691495797.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+    },
+    "3": {
+      "categoryId": 0,
+      "brandId": 0,
+      "brandCategoryId": 0,
+      "brandDescription": "تقریباً هر ابزار هوشمندی که بخواهید در میان تولیدات برند اپل موجود است. در ادامه درباره‌ی دسته‌بندی‌های محصولات این برند صحبت خواهیم کرد.",
+      "pageTitle": "گوشی آیفون 13 پرو|128|طلایی",
+      "model": "13 pro",
+      "price": "1200",
+      "discount": "400",
+      "discountAvailability": true,
+      "inventoryStatus": "OUTOFSTOCK",
+      "quantity": 0,
+      "isAvailable": false,
+      "productDescription": "آیفون 13 پرو - 128 گیگ - طلایی",
+      "specsCategory": "0-mobile",
+      "specs": "ram:2G-rom:128-weight:900g-isActive:true-color:gold",
+      "rating": 4.3,
+      "images": "https://dkstatics-public.digikala.com/digikala-products/dcd6e4e843bea3f070614a95d27b1181fdf23008_1677071626.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90---https://dkstatics-public.digikala.com/digikala-products/28a2a6b021614d390f2439b56c478e3d66e278c9_1691495797.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+    },
+    "4": {
+      "categoryId": 0,
+      "brandId": 1,
+      "brandCategoryId": 0,
+      "brandDescription": "تقریباً هر ابزار هوشمندی که بخواهید در میان تولیدات برند اپل موجود است. در ادامه درباره‌ی دسته‌بندی‌های محصولات این برند صحبت خواهیم کرد.",
+      "pageTitle": "سامسونگ اس 22 پلاس|128|سبز",
+      "model": "s22 plus",
+      "price": "1000",
+      "discount": "400",
+      "discountAvailability": true,
+      "inventoryStatus": "INSTOCK",
+      "quantity": 10,
+      "isAvailable": true,
+      "productDescription": "سامسونگ اس 22 پلاس - 128 گیگ - سبز",
+      "specsCategory": "0-mobile",
+      "specs": "ram:6G-rom:128-weight:900g-isActive:true-color:green",
+      "rating": 4.5,
+      "images": "https://dkstatics-public.digikala.com/digikala-products/4b5ea4837ec8ea8574083ddcdd2a86b933f21517_1656430998.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90---https://dkstatics-public.digikala.com/digikala-products/18ec81971ede3c81ffddc250b66e0f11d1678c7f_1692516607.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+    },
+    "5": {
+      "categoryId": 0,
+      "brandId": 1,
+      "brandCategoryId": 0,
+      "brandDescription": "تقریباً هر ابزار هوشمندی که بخواهید در میان تولیدات برند اپل موجود است. در ادامه درباره‌ی دسته‌بندی‌های محصولات این برند صحبت خواهیم کرد.",
+      "pageTitle": "سامسونگ اس 22 پلاس|128|سبز",
+      "model": "s22 plus",
+      "price": "1000",
+      "discount": "400",
+      "discountAvailability": true,
+      "inventoryStatus": "INSTOCK",
+      "quantity": 10,
+      "isAvailable": true,
+      "productDescription": "سامسونگ اس 22 پلاس - 128 گیگ - سبز",
+      "specsCategory": "0-mobile",
+      "specs": "ram:6G-rom:128-weight:900g-isActive:true-color:green",
+      "rating": 4.5,
+      "images": "https://dkstatics-public.digikala.com/digikala-products/4b5ea4837ec8ea8574083ddcdd2a86b933f21517_1656430998.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90---https://dkstatics-public.digikala.com/digikala-products/18ec81971ede3c81ffddc250b66e0f11d1678c7f_1692516607.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+    },
+    "6": {
+      "categoryId": 0,
+      "brandId": 1,
+      "brandCategoryId": 0,
+      "brandDescription": "تقریباً هر ابزار هوشمندی که بخواهید در میان تولیدات برند اپل موجود است. در ادامه درباره‌ی دسته‌بندی‌های محصولات این برند صحبت خواهیم کرد.",
+      "pageTitle": "سامسونگ اس 22|128|طلایی",
+      "model": "s22",
+      "price": "1000",
+      "discount": "400",
+      "discountAvailability": true,
+      "inventoryStatus": "OUTOFSTOCK",
+      "quantity": 0,
+      "isAvailable": false,
+      "productDescription": "سامسونگ اس 22 پلاس - 128 گیگ - طلایی",
+      "specsCategory": "0-mobile",
+      "specs": "ram:6G-rom:128-weight:900g-isActive:true-color:gold",
+      "rating": 4.5,
+      "images": "https://dkstatics-public.digikala.com/digikala-products/237c3ed04b4a7480e0920d8bb0cb5aa0385913e8_1656430872.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90---https://dkstatics-public.digikala.com/digikala-products/b6ca81251fec94c50f7f6ecd2df1ca67d0495f4b_1687936374.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+    },
+    "7": {
+      "categoryId": 0,
+      "brandId": 1,
+      "brandCategoryId": 0,
+      "brandDescription": "تقریباً هر ابزار هوشمندی که بخواهید در میان تولیدات برند اپل موجود است. در ادامه درباره‌ی دسته‌بندی‌های محصولات این برند صحبت خواهیم کرد.",
+      "pageTitle": "سامسونگ اس 22|256|طلایی",
+      "model": "s22",
+      "price": "1000",
+      "discount": "400",
+      "discountAvailability": true,
+      "inventoryStatus": "INSTOCK",
+      "quantity": 10,
+      "isAvailable": true,
+      "productDescription": "سامسونگ اس 22 پلاس - 256 گیگ - طلایی",
+      "specsCategory": "0-mobile",
+      "specs": "ram:6G-rom:256-weight:900g-isActive:true-color:white",
+      "rating": 4.5,
+      "images": "https://dkstatics-public.digikala.com/digikala-products/237c3ed04b4a7480e0920d8bb0cb5aa0385913e8_1656430872.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90---https://dkstatics-public.digikala.com/digikala-products/b6ca81251fec94c50f7f6ecd2df1ca67d0495f4b_1687936374.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+    }
+  },
+  "category": {
+    "0": {
+      "title": "mobile",
+      "brandsTitles": "اپل-سامسونگ",
+      "persianTitle": "موبایل"
+    },
+    "1": {
+      "title": "laptop",
+      "brandsTitles": "اپل-سامسونگ",
+      "persianTitle": "لپ تاپ"
+    },
+    "2": {
+      "title": "tablet",
+      "brandsTitles": "اپل-سامسونگ",
+      "persianTitle": "تبلت"
+    }
+  },
+  "brand": {
+    "0": {
+      "title": "apple",
+      "persianTitle": "اپل",
+      "description": "تقریباً هر ابزار هوشمندی که بخواهید در میان تولیدات برند اپل موجود است. در ادامه درباره‌ی دسته‌بندی‌های محصولات این برند صحبت خواهیم کرد."
+    },
+    "1": {
+      "title": "samsung",
+      "persianTitle": "سامسونگ",
+      "description": "تقریباً هر ابزار هوشمندی که بخواهید در میان تولیدات برند سامسونگ موجود است. در ادامه درباره‌ی دسته‌بندی‌های محصولات این برند صحبت خواهیم کرد."
+    }
+  },
+  "brandCategory": {
+    "0": {
+      "title": "iphone",
+      "persianTitle": "آیفون",
+      "categoryId": "0",
+      "brandId": "0"
+    },
+    "1": {
+      "title": "macbook",
+      "persianTitle": "مک بوک",
+      "categoryId": "0",
+      "brandId": "0"
+    },
+    "2": {
+      "title": "ipad",
+      "persianTitle": "آیپد",
+      "categoryId": "0",
+      "brandId": "0"
+    }
+  },
+  "specsCategory": {
+    "0": {
+      "categoryId": "0",
+      "ram": "رم",
+      "rom": "حافظه",
+      "isActive": "فعال شده",
+      "color": "رنگ",
+      "weight": "وزن",
+      "dualSim": true
+    },
+    "1": {
+      "categoryId": "1",
+      "ram": "رم",
+      "hard": "حافظه",
+      "screenSize": "اندازه صفحه",
+      "color": "رنگ",
+      "weight": "وزن"
+    },
+    "2": {
+      "categoryId": "2",
+      "ram": "رم",
+      "hard": "حافظه",
+      "pen": "قلم",
+      "color": "رنگ",
+      "weight": "وزن"
+    }
+  }
+}

@@ -2,13 +2,11 @@ import { Component, OnInit, OnDestroy, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Subscription, map } from 'rxjs';
 import { Store } from '@ngrx/store';
-// import { ToastrService } from 'ngx-toastr';
+
 import { RouterModule } from '@angular/router';
 
 import * as fromApp from '../../store/app.reducer';
 import { Product } from '../../model/product.model';
-// import * as CartActions from '../../store/cart/action/cart.actions';
-// import { CartItems } from '../../model/cart.model';
 import { ProductComponent } from './product/product.component';
 import { LoadingComponent } from '../loading/loading.component';
 

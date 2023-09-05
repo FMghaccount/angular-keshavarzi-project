@@ -98,7 +98,7 @@ export class CartComponent implements OnInit, OnDestroy {
     this.store.dispatch(new CartActions.RemoveWholeItemFromCart(cartItem));
   }
 
-  pay() {
+  sendPaymentReq() {
     let startDate = new Date();
     let minute = 60 * 10 * 1000;
     let endDate = new Date(startDate.getTime() + minute);
@@ -106,16 +106,21 @@ export class CartComponent implements OnInit, OnDestroy {
       id: crypto.randomUUID(),
       cart: this.cart,
       expirationTime: endDate,
+      refId: '',
     };
-
     this.http
       .post(environment.firebaseApiUrl + 'orders.json', order, {
         observe: 'response',
       })
       .subscribe((response) => {
         this.storedCartId = response.body['name'];
+        window.location.href = `http://localhost:56743/landing/${this.storedCartId}`;
       });
-    window.location.href = `https://ng-recipe-farzin.vercel.app/landing/${this.storedCartId}`;
+  }
+
+  pay() {
+    this.sendPaymentReq();
+    // window.location.href = `https://ng-recipe-farzin.vercel.app/landing/${this.storedCartId}`;
   }
 
   ngOnDestroy(): void {

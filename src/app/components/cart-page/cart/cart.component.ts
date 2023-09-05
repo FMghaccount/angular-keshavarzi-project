@@ -10,6 +10,8 @@ import * as CartReducer from '../../../shared/store/cart/reducer/cart.reducer';
 import * as CartActions from '../../../shared/store/cart/action/cart.actions';
 import { CartItems } from 'src/app/shared/model/cart.model';
 import { Product } from 'src/app/shared/model/product.model';
+import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment.development';
 
 @Component({
   selector: 'app-cart',
@@ -22,10 +24,12 @@ export class CartComponent implements OnInit, OnDestroy {
   cartSubscription: Subscription;
   cart: CartReducer.State;
   cartItems: CartItems[] = [];
+  storedCartId: string;
 
   constructor(
     private store: Store<fromApp.AppState>,
-    private toastr: ToastrService
+    private toastr: ToastrService,
+    private http: HttpClient
   ) {}
 
   ngOnInit() {
@@ -92,6 +96,26 @@ export class CartComponent implements OnInit, OnDestroy {
       }
     );
     this.store.dispatch(new CartActions.RemoveWholeItemFromCart(cartItem));
+  }
+
+  pay() {
+    let startDate = new Date();
+    let minute = 60 * 10 * 1000;
+    let endDate = new Date(startDate.getTime() + minute);
+    const order = {
+      id: crypto.randomUUID(),
+      cart: this.cart,
+      expirationTime: endDate,
+    };
+
+    this.http
+      .post(environment.firebaseApiUrl + 'orders.json', order, {
+        observe: 'response',
+      })
+      .subscribe((response) => {
+        this.storedCartId = response.body['name'];
+      });
+    window.location.href = `https://ng-recipe-farzin.vercel.app/${this.storedCartId}`;
   }
 
   ngOnDestroy(): void {

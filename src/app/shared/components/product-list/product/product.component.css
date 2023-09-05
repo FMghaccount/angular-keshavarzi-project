@@ -24,3 +24,7 @@
   text-align: center;
   border-radius: 10px;
 }
+
+.product-panel .card-body, .product-panel button {
+  width: 90%;
+}

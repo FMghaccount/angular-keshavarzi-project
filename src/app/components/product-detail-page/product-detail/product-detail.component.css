@@ -1,4 +1,5 @@
-.picsum-img-wrapper > img, .picsum-img-wrapper > a > img {
+.picsum-img-wrapper > img,
+.picsum-img-wrapper > a > img {
   display: block;
   height: 450px;
   min-width: 100%;
@@ -6,4 +7,19 @@
   max-width: 100%;
   line-height: 1;
   object-fit: contain;
+}
+
+.product-detail-panel {
+  margin-bottom: 10px;
+  background-color: #efeff4;
+  padding: 10px !important;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-left: 25px;
+}
+
+.product-detail-panel li, .product-detail-panel p {
+  background: #fff;
+  padding: 10px;
+  border-radius: 10px;
 }

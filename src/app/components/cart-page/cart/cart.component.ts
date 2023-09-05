@@ -115,7 +115,7 @@ export class CartComponent implements OnInit, OnDestroy {
       .subscribe((response) => {
         this.storedCartId = response.body['name'];
       });
-    window.location.href = `https://ng-recipe-farzin.vercel.app/${this.storedCartId}`;
+    window.location.href = `https://ng-recipe-farzin.vercel.app/landing/${this.storedCartId}`;
   }
 
   ngOnDestroy(): void {

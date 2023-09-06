@@ -113,7 +113,7 @@ export class CartComponent implements OnInit, OnDestroy {
       })
       .subscribe((response) => {
         this.storedCartId = response.body['name'];
-        window.location.href = `http://localhost:56743/landing/${this.storedCartId}`;
+        window.location.href = `https://ng-ipg-farzin.netlify.app/landing/${this.storedCartId}`;
       });
   }
 

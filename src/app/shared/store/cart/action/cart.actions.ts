@@ -8,6 +8,7 @@ export const FETCH_CART = '[Cart] FETCH_CART';
 export const ADDTO_CART = '[Cart] ADDTO_CART';
 export const REMOVEFROM_CART = '[Cart] REMOVEFROM_CART';
 export const REMOVEWHOLEITEMFROM_CART = '[Cart] REMOVEWHOLEITEMFROM_CART';
+export const CLEAR_CART = '[Cart] CLEAR_CART';
 
 export class initCart implements Action {
   readonly type = INIT_CART;
@@ -26,11 +27,19 @@ export class AddToCart implements Action {
 
   constructor(public payload: CartItems) {}
 }
+
+export class ClearCart implements Action {
+  readonly type = CLEAR_CART;
+
+  constructor() {}
+}
+
 export class RemoveFromCart implements Action {
   readonly type = REMOVEFROM_CART;
 
   constructor(public payload: CartItems) {}
 }
+
 export class RemoveWholeItemFromCart implements Action {
   readonly type = REMOVEWHOLEITEMFROM_CART;
 
@@ -47,4 +56,5 @@ export type CartActions =
   | AddToCart
   | initCart
   | RemoveFromCart
-  | RemoveWholeItemFromCart;
+  | RemoveWholeItemFromCart
+  | ClearCart;

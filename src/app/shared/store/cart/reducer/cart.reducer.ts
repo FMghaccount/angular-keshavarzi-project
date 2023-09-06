@@ -38,6 +38,9 @@ export function cartReducer(
         isPaid: action.payload.isPaid,
         expirationDate: action.payload.expirationDate,
       };
+    case CartActions.CLEAR_CART:
+      return initialState;
+
     case CartActions.ADDTO_CART:
       let cartItems = [...state.items];
       let foundItem = cartItems.findIndex(

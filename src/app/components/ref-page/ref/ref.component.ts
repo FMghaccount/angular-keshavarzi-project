@@ -1,11 +1,15 @@
 import { Subscription, map, switchMap } from 'rxjs';
 import { OrderService } from './../../../shared/services/order.service';
+import { Store } from '@ngrx/store';
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
+
 import { Order } from 'src/app/shared/model/order.model';
 import { LoadingComponent } from 'src/app/shared/components/loading/loading.component';
 import { State } from 'src/app/shared/store/cart/reducer/cart.reducer';
+import * as fromApp from '../../../shared/store/app.reducer';
+import * as CartActions from '../../../shared/store/cart/action/cart.actions';
 
 @Component({
   selector: 'app-ref',
@@ -26,7 +30,8 @@ export class RefComponent {
 
   constructor(
     private orderService: OrderService,
-    private activatedRoute: ActivatedRoute
+    private activatedRoute: ActivatedRoute,
+    private store: Store<fromApp.AppState>
   ) {}
 
   ngOnInit() {
@@ -46,18 +51,22 @@ export class RefComponent {
         })
       )
       .subscribe((order) => {
-        this.order = order;
-        this.isLoading = false;
-        if (localStorage.getItem('cart')) {
-          this.storedCart = JSON.parse(localStorage.getItem('cart'));
-          if (this.order.isPaid) {
-            localStorage.removeItem('cart');
+        if (order !== null && this.ok === 'true') {
+          this.order = order;
+          if (localStorage.getItem('cart')) {
+            this.storedCart = JSON.parse(localStorage.getItem('cart'));
+            if (this.order?.isPaid) {
+              localStorage.removeItem('cart');
+              this.store.dispatch(new CartActions.ClearCart());
+            }
           }
+        } else {
+          this.order = null;
         }
       });
     this.timeoutSub = setTimeout(() => {
       this.isLoading = false;
-    }, 4000);
+    }, 3000);
   }
 
   ngOnDestroy() {

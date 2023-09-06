@@ -26,7 +26,6 @@ export class CartComponent implements OnInit, OnDestroy {
     if (localStorage.getItem('cart')) {
       this.storedCart = JSON.parse(localStorage.getItem('cart'));
       let date = new Date();
-      // console.log(this.storedCart.expirationDate.getTime());
       let expirationDate = new Date(this.storedCart.expirationDate);
       if (
         date.getTime() < expirationDate.getTime() ||

@@ -1,6 +1,12 @@
+<div *ngIf="order?.cart?.length<= 0 && isLoading === true" class="container-fluid  container-lg mb-5 mt-5">
+  <div class="row justify-content-center align-items-center">
+    <app-loading></app-loading>
+  </div>
+</div>
+
 <div class="container-fluid container-md">
   <div
-    *ngIf="order?.cart?.length === 0 && ok === 'false'"
+    *ngIf="order?.cart?.length === 0 && ok === 'false' && isLoading === false"
     class="container border py-3 rounded-2 border-danger border-3 mb-4 mt-5"
   >
     <div
@@ -14,9 +20,9 @@
       </p>
     </div>
   </div>
-  <div *ngIf="order?.cart?.length !== 0 && ok === 'true'" class="container mb-2 mt-5">
+  <div *ngIf="order?.cart?.length !== 0 && ok === 'true' && isLoading === false" class="container mb-2 mt-5">
     <div class="row text-center">
-      <h4>سبد خرید شما</h4>
+      <h4>اقلام خریداری شده</h4>
     </div>
     <div class="row">
       <div class="card mb-3" *ngFor="let item of order?.cart.items; let i = index">
@@ -39,7 +45,7 @@
           >
             <div class="card-body p-0">
               <ul class="list-unstyled pe-0">
-                <li class="mb-1">کالا: {{ item.title.split('|').join('') }}</li>
+                <li class="mb-1">کالا: {{ item.title.split('|').join(' - ') }}</li>
                 <li class="mb-1">تعداد: {{ item.amount }}</li>
                 <li class="mb-1">قیمت واحد: {{ item.price }} تومان</li>
               </ul>

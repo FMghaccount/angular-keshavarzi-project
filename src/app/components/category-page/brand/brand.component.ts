@@ -47,7 +47,6 @@ export class BrandComponent {
         })
       )
       .subscribe((products) => {
-        // console.log(products);
         this.products = products;
       });
   }

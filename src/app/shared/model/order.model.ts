@@ -5,6 +5,7 @@ export class Order {
     public id: string,
     public refId: string,
     public expirationTime: string,
-    public cart: State[]
+    public cart: State[],
+    public isPaid: boolean
   ) {}
 }

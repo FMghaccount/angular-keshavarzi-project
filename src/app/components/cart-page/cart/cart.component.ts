@@ -106,6 +106,7 @@ export class CartComponent implements OnInit, OnDestroy {
       cart: this.cart,
       expirationTime: endDate,
       refId: '',
+      isPaid: false,
     };
     this.http
       .post(process.env.NG_APP_FIREBASEAPIURL + 'orders.json', order, {

@@ -1,6 +1,6 @@
 <div class="container-fluid container-md">
   <div
-    *ngIf="order?.cart?.length === 0"
+    *ngIf="order?.cart?.length === 0 && ok === 'false'"
     class="container border py-3 rounded-2 border-danger border-3 mb-4 mt-5"
   >
     <div
@@ -14,7 +14,7 @@
       </p>
     </div>
   </div>
-  <div *ngIf="order?.cart?.length !== 0" class="container mb-2 mt-5">
+  <div *ngIf="order?.cart?.length !== 0 && ok === 'true'" class="container mb-2 mt-5">
     <div class="row text-center">
       <h4>سبد خرید شما</h4>
     </div>

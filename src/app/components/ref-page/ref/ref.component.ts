@@ -31,6 +31,7 @@ export class RefComponent {
   isLoading: boolean = false;
   timeoutSub;
   storedCart: State;
+  date: string;
 
   constructor(
     private orderService: OrderService,
@@ -39,6 +40,7 @@ export class RefComponent {
   ) {}
 
   ngOnInit() {
+    this.date = new Date().toLocaleString('fa-IR');
     this.isLoading = true;
     this.orderSubscription = this.activatedRoute.queryParams
       .pipe(
@@ -74,7 +76,10 @@ export class RefComponent {
   }
 
   downloadAsPDF() {
-    const width = this.dataToExport.nativeElement.clientWidth;
+    console.log(this.dataToExport.nativeElement);
+    console.log(this.dataToExport);
+    window.scrollTo(0, 0);
+    const width = this.dataToExport.nativeElement.clientWidth + 80;
     const height = this.dataToExport.nativeElement.clientHeight + 40;
     let orientation: 'p' | 'portrait' | 'l' | 'landscape' = 'p';
     let imageUnit: 'pt' | 'px' | 'in' | 'mm' | 'cm' | 'ex' | 'em' | 'pc' = 'pt';
@@ -87,31 +92,16 @@ export class RefComponent {
     domToImage
       .toPng(this.dataToExport.nativeElement, {
         width: width,
-        height: height,
+        height: height + 30,
       })
       .then((result) => {
-        const pdf = new jsPDF(orientation, imageUnit, [
-          width + 50,
-          height + 220,
-        ]);
-        pdf.setFontSize(48);
-        pdf.setTextColor('#2585fe');
-        // pdf.text('رسید خرید', 25, 75);
-
-        pdf.setFontSize(24);
-        pdf.setTextColor('#131523');
-        // pdf.text('Report date: ' + date.toLocaleString('fa-IR'), 25, 115);
-        pdf.addImage(result, 'PNG', 25, 185, width, height);
+        const pdf = new jsPDF(orientation, imageUnit, [width, height]);
+        pdf.addImage(result, 'PNG', 0, 0, width, height);
         pdf.save('رسید خرید شما' + '.pdf');
       })
       .catch((error) => {
         console.log(error);
       });
-  }
-
-  getInvoiceDate() {
-    const date = new Date();
-    return date.toLocaleString('fa-IR');
   }
 
   ngOnDestroy() {

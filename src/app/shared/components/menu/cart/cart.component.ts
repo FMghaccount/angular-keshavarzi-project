@@ -28,7 +28,10 @@ export class CartComponent implements OnInit, OnDestroy {
       let date = new Date();
       // console.log(this.storedCart.expirationDate.getTime());
       let expirationDate = new Date(this.storedCart.expirationDate);
-      if (date.getTime() < expirationDate.getTime()) {
+      if (
+        date.getTime() < expirationDate.getTime() ||
+        this.storedCart.isPaid === false
+      ) {
         this.cartAmount = this.storedCart.amount;
         this.store.dispatch(new CartActions.SetCart(this.storedCart));
       } else {

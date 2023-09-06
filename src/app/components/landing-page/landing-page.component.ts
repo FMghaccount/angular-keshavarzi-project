@@ -29,7 +29,6 @@ export class LandingPageComponent implements OnDestroy, OnInit {
         this.products = products;
       });
     if (this.products.length === 0) {
-      console.log(this.products);
       this.store.dispatch(new ProductsActions.FetchProducts());
     }
   }

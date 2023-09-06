@@ -40,6 +40,13 @@ export const routes: Routes = [
       ),
   },
   {
+    path: 'ref',
+    loadChildren: () =>
+      import('./components/ref-page/routes').then(
+        (module) => module.REF_ROUTES
+      ),
+  },
+  {
     path: '404',
     loadComponent: () =>
       import(

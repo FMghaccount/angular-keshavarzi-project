@@ -39,14 +39,15 @@
           >
             <div class="card-body p-0">
               <ul class="list-unstyled pe-0">
+                <li class="mb-1">کالا: {{ item.title.split('|').join(' - ') }}</li>
                 <li class="mb-1">تعداد: {{ item.amount }}</li>
                 <li class="mb-1">قیمت واحد: {{ item.price }} تومان</li>
               </ul>
-              <div class="row flex-row gx-2">
+              <div class="row flex-row">
                 <div>
                   <button
                     (click)="increaseCartItemAmount(item.item)"
-                    class="col-6 btn btn-success fs-7 mb-2"
+                    class="col-6 btn btn-success d-block m-auto fs-7 mb-2"
                   >
                     +
                   </button>
@@ -55,7 +56,7 @@
                 <div>
                   <button
                     (click)="decreaseCartItemAmount(item.item)"
-                    class="col-6 btn btn-danger mb-2"
+                    class="col-6 btn btn-danger d-block m-auto mb-2"
                   >
                     -
                   </button>

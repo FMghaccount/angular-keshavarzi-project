@@ -48,8 +48,6 @@ export class ProductListComponent implements OnInit, OnDestroy {
         )
         .subscribe((products) => {
           this.products = products;
-          // this.isLoading = false;
-          console.log(this.isLoading);
         });
     } else this.products = this.receivedProducts;
   }

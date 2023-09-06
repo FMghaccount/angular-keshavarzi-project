@@ -5,7 +5,6 @@ import { HttpClient } from '@angular/common/http';
 import { switchMap, map } from 'rxjs';
 import * as fromApp from '../../app.reducer';
 import * as ProductsActions from '../action/product.actions';
-import { environment } from 'src/environments/environment.development';
 import { Product } from 'src/app/shared/model/product.model';
 
 @Injectable()
@@ -15,7 +14,7 @@ export class productEffects {
       ofType(ProductsActions.FETCH_PRODUCTS),
       switchMap(() => {
         return this.http.get<Product[]>(
-          environment.firebaseApiUrl + '/products.json'
+          process.env.NG_APP_FIREBASEAPIURL + '/products.json'
         );
       }),
       map((products) => {

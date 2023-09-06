@@ -11,7 +11,6 @@ import * as CartActions from '../../../shared/store/cart/action/cart.actions';
 import { CartItems } from 'src/app/shared/model/cart.model';
 import { Product } from 'src/app/shared/model/product.model';
 import { HttpClient } from '@angular/common/http';
-import { environment } from 'src/environments/environment.development';
 
 @Component({
   selector: 'app-cart',
@@ -109,7 +108,7 @@ export class CartComponent implements OnInit, OnDestroy {
       refId: '',
     };
     this.http
-      .post(environment.firebaseApiUrl + 'orders.json', order, {
+      .post(process.env.NG_APP_FIREBASEAPIURL + 'orders.json', order, {
         observe: 'response',
       })
       .subscribe((response) => {
@@ -120,7 +119,6 @@ export class CartComponent implements OnInit, OnDestroy {
 
   pay() {
     this.sendPaymentReq();
-    // window.location.href = `https://ng-recipe-farzin.vercel.app/landing/${this.storedCartId}`;
   }
 
   ngOnDestroy(): void {

@@ -5,7 +5,6 @@ import { HttpClient } from '@angular/common/http';
 import { switchMap, map } from 'rxjs';
 import * as fromApp from '../../app.reducer';
 import * as CategoriesActions from '../action/category.actions';
-import { environment } from 'src/environments/environment.development';
 import { Category } from 'src/app/shared/model/category.model';
 
 @Injectable()
@@ -15,7 +14,7 @@ export class categoryEffects {
       ofType(CategoriesActions.FETCH_CATEGORIES),
       switchMap(() => {
         return this.http.get<Category[]>(
-          environment.firebaseApiUrl + '/category.json'
+          process.env.NG_APP_FIREBASEAPIURL + '/category.json'
         );
       }),
       map((categories) => {

@@ -3,6 +3,7 @@ import { map, switchMap, Subscription } from 'rxjs';
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { State, Store } from '@ngrx/store';
+
 import { ActivatedRoute, Params, RouterModule } from '@angular/router';
 import { Product } from 'src/app/shared/model/product.model';
 import * as fromApp from '../../../shared/store/app.reducer';
@@ -52,18 +53,6 @@ export class SelectedCategoryComponent {
       .subscribe((products) => {
         this.products = products;
       });
-
-    // this.activatedRoute.queryParams.subscribe((queryParam: Params) => {
-    //   if (queryParam['brand'] !== undefined) {
-    //     this.brandId = +queryParam['brand'];
-    //     console.log(this.products);
-    //     console.log(this.brandId);
-    //     this.products = this.products.filter((product) => {
-    //       product.brandId === this.brandId;
-    //     });
-    //     console.log(this.products);
-    //   }
-    // });
 
     // combineLatest([
     //   this.activatedRoute.params,

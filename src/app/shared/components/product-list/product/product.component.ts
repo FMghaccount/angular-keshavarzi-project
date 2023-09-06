@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { ToastrService } from 'ngx-toastr';
+
 import { Product } from 'src/app/shared/model/product.model';
 import { CartItems } from 'src/app/shared/model/cart.model';
 import * as fromApp from '../../../store/app.reducer';

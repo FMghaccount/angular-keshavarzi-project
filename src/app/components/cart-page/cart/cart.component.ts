@@ -4,13 +4,13 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { Store } from '@ngrx/store';
+import { HttpClient } from '@angular/common/http';
 
 import * as fromApp from '../../../shared/store/app.reducer';
 import * as CartReducer from '../../../shared/store/cart/reducer/cart.reducer';
 import * as CartActions from '../../../shared/store/cart/action/cart.actions';
 import { CartItems } from 'src/app/shared/model/cart.model';
 import { Product } from 'src/app/shared/model/product.model';
-import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-cart',

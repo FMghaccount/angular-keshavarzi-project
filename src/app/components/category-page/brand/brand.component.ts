@@ -2,11 +2,11 @@ import { switchMap, map, Subscription } from 'rxjs';
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Store } from '@ngrx/store';
+import { ActivatedRoute, RouterModule } from '@angular/router';
 
 import { Product } from 'src/app/shared/model/product.model';
 import * as fromApp from '../../../shared/store/app.reducer';
 import { ProductListComponent } from 'src/app/shared/components/product-list/product-list.component';
-import { ActivatedRoute, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-brand',

@@ -8,12 +8,12 @@ import {
   NgbCarouselModule,
 } from '@ng-bootstrap/ng-bootstrap';
 import { ToastrService } from 'ngx-toastr';
+import { Meta, Title } from '@angular/platform-browser';
 
 import { Product } from 'src/app/shared/model/product.model';
 import * as fromApp from '../../../shared/store/app.reducer';
 import { CartItems } from 'src/app/shared/model/cart.model';
 import * as CartActions from '../../../shared/store/cart/action/cart.actions';
-import { Meta, Title } from '@angular/platform-browser';
 import { ProductListComponent } from 'src/app/shared/components/product-list/product-list.component';
 
 @Component({

@@ -2,10 +2,10 @@ import { Subscription, map } from 'rxjs';
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Store } from '@ngrx/store';
+import { RouterModule } from '@angular/router';
 
 import { ProductListComponent } from 'src/app/shared/components/product-list/product-list.component';
 import * as fromApp from '../../../shared/store/app.reducer';
-import { RouterModule } from '@angular/router';
 import { Product } from 'src/app/shared/model/product.model';
 
 @Component({

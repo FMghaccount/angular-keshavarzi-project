@@ -3,7 +3,7 @@ import { OrderService } from './../../../shared/services/order.service';
 import { Store } from '@ngrx/store';
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterModule } from '@angular/router';
 
 import { Order } from 'src/app/shared/model/order.model';
 import { LoadingComponent } from 'src/app/shared/components/loading/loading.component';
@@ -14,7 +14,7 @@ import * as CartActions from '../../../shared/store/cart/action/cart.actions';
 @Component({
   selector: 'app-ref',
   standalone: true,
-  imports: [CommonModule, LoadingComponent],
+  imports: [CommonModule, LoadingComponent, RouterModule],
   templateUrl: './ref.component.html',
   styleUrls: ['./ref.component.css'],
 })

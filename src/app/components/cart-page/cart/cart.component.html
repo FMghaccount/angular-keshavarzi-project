@@ -75,10 +75,11 @@
   </div>
   <div
     class="card mb-3 d-flex flex-column align-items-center p-3 text-success flex-sm-row gap-3 justify-content-between bg-success-subtle"
+    *ngIf="cartItems?.length !== 0"
   >
     <div class="d-flex justify-content-between gap-3">
       <div>مبلغ نهایی:</div>
-      <div>{{ cart.price }}</div>
+      <div>{{ cart.price }} تومان</div>
     </div>
     <div>
       <button (click)="pay()" class="btn btn-success">پرداخت</button>

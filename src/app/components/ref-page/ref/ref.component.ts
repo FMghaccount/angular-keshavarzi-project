@@ -48,13 +48,13 @@ export class RefComponent {
       .subscribe((order) => {
         this.order = order;
         this.isLoading = false;
+        if (localStorage.getItem('cart')) {
+          this.storedCart = JSON.parse(localStorage.getItem('cart'));
+          if (this.order.isPaid) {
+            localStorage.removeItem('cart');
+          }
+        }
       });
-    if (localStorage.getItem('cart')) {
-      this.storedCart = JSON.parse(localStorage.getItem('cart'));
-      if (this.order.isPaid) {
-        localStorage.removeItem('cart');
-      }
-    }
     this.timeoutSub = setTimeout(() => {
       this.isLoading = false;
     }, 4000);

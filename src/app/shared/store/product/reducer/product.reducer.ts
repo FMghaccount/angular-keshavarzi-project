@@ -6,10 +6,14 @@ import * as ProductsActions from '../action/product.actions';
 
 export interface State {
   products: Product[];
+  error: string;
+  isLoading: boolean;
 }
 
 const initialState: State = {
   products: [],
+  error: null,
+  isLoading: false,
 };
 
 // export const productReducer = createReducer(
@@ -31,6 +35,15 @@ export function productReducer(
       return {
         ...state,
         products: [...action.payload],
+        error: null,
+        isLoading: false,
+      };
+    case ProductsActions.LOADFAILURE_PRODUCTS:
+      return {
+        ...state,
+        products: [],
+        error: action.payload,
+        isLoading: false,
       };
     default:
       return state;

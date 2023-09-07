@@ -13,6 +13,7 @@ import { OrderService } from './../../../shared/services/order.service';
 import { State } from 'src/app/shared/store/cart/reducer/cart.reducer';
 import * as fromApp from '../../../shared/store/app.reducer';
 import * as CartActions from '../../../shared/store/cart/action/cart.actions';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-ref',
@@ -36,7 +37,8 @@ export class RefComponent {
   constructor(
     private orderService: OrderService,
     private activatedRoute: ActivatedRoute,
-    private store: Store<fromApp.AppState>
+    private store: Store<fromApp.AppState>,
+    private toastr: ToastrService
   ) {}
 
   ngOnInit() {
@@ -66,8 +68,20 @@ export class RefComponent {
               this.store.dispatch(new CartActions.ClearCart());
             }
           }
+          this.toastr.success('پرداخت با موفقیت انجام شد', 'انجام شد!', {
+            timeOut: 4000,
+            closeButton: true,
+            newestOnTop: true,
+            progressBar: true,
+          });
         } else {
           this.order = null;
+          this.toastr.error('پرداخت با خطا رو برو شد', 'انجام نشد!', {
+            timeOut: 4000,
+            closeButton: true,
+            newestOnTop: true,
+            progressBar: true,
+          });
         }
       });
     this.timeoutSub = setTimeout(() => {

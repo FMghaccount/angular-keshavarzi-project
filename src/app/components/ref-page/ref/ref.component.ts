@@ -1,3 +1,4 @@
+import { Title } from '@angular/platform-browser';
 import { Subscription, map, switchMap } from 'rxjs';
 import { Store } from '@ngrx/store';
 import { Component, ViewChild, ElementRef } from '@angular/core';
@@ -38,10 +39,12 @@ export class RefComponent {
     private orderService: OrderService,
     private activatedRoute: ActivatedRoute,
     private store: Store<fromApp.AppState>,
-    private toastr: ToastrService
+    private toastr: ToastrService,
+    private title: Title
   ) {}
 
   ngOnInit() {
+    this.title.setTitle('فروشگاه سبد - رسید خرید');
     this.date = new Date().toLocaleString('fa-IR');
     this.isLoading = true;
     this.orderSubscription = this.activatedRoute.queryParams
